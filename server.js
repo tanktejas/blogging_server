@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const path = require("path");
 const app = express();
-
+ 
 app.use(express.urlencoded({ extended: false }));
 // this we have to write when our local host deny to connect with another local host.
 const cors = require("cors");
