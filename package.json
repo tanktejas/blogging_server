@@ -10,9 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@devexpress/dx-core": "^3.0.0",
+    "@devexpress/dx-react-chart": "^3.0.0",
+    "@devexpress/dx-react-chart-material-ui": "^3.0.0",
+    "@devexpress/dx-react-core": "^3.0.0",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "i": "^0.3.7",
+    "material-paper": "0.0.8",
     "mongoose": "^6.1.5",
+    "npm": "^8.3.1",
     "path": "^0.12.7"
   }
 }
