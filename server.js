@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const path = require("path");
 const app = express();
- 
+
 app.use(express.urlencoded({ extended: false }));
 // this we have to write when our local host deny to connect with another local host.
 const cors = require("cors");
@@ -17,10 +17,10 @@ app.use(cors(corsOptions));
 
 // first database
 mongoose
-  .connect(
-      "mongodb+srv://tejas:ab@cluster0.bczol.mongodb.net/test",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect("mongodb+srv://tejas:ab@cluster0.bczol.mongodb.net/test", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("success!!");
   });
@@ -75,6 +75,10 @@ app.post("/adddata", (req, res) => {
   let data = req.body;
   let val = new mod(data);
   val.save();
+});
+
+app.get("/", (req, res) => {
+  res.send("hello");
 });
 
 //ratting which users give
